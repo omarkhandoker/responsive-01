@@ -13,8 +13,8 @@ nav{
     display: flex;
     justify-content: space-between;
     height: 80px;
-    width: 100%;
-    padding: 0 20px 0 15px;
+    
+    padding: 0 25px 0 30px;
     align-items: center;
 }
 
@@ -24,6 +24,7 @@ nav{
 
 nav ul {
     display: flex;
+    margin-right: 50px;
 }
 nav ul li{ 
     list-style-type: none;
@@ -32,14 +33,302 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color: white;
+    color:white;
     padding: 10px 15px;
     border-radius: 5px;
     transition: 0.5s;
+    font-weight: bold;
 
 }
 
-nav ul li a:hover {
-    background-color: white;
-    color: black;
+nav ul li a:hover,ul li a.active{
+    background-color: rgba(255, 255, 255, 0.466);
+    font-weight: bold;
+}
+
+#click{
+    display: none;
+}
+.nameOf{
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    display: none;
+}
+
+
+header{
+    background-image: url(image/hd-wallpaper-ga4ba5bbc0_1920.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+/* main section start  */
+.section-1{
+    background-color: #16213E;
+    padding-bottom: 50px;
+}
+.headding{
+    text-align: center;
+    padding: 50px 0;
+    color: white;
+    font-size: 28px;
+    letter-spacing: 0.2em;
+}
+.main-1-section{
+    width: 1180px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    
+}
+.main-1-child{
+   text-align: center;
+   background-color: white;
+   border: 3px solid green;
+   padding: 10px 20px;
+   box-shadow: 5px 5px 10px green;
+   border-radius: 5px;
+   
+}
+.main-1-child i{
+    font-size: 32px;
+}
+.main-1-child h2{
+    margin: 20px 0;
+}
+
+
+
+/* section-2 code  */
+
+.section-mother{
+ background-color: #154360;
+}
+
+.sec-2-child{
+    margin-left:200px ;
+    margin-right:200px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Text-sec-2{
+    color: white;
+}
+.Text-sec-2 h2{
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+.Text-sec-2 a{
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top:20px;
+    display:inline-block ;
+    transition: 0.5s;
+}
+.Text-sec-2 a:hover{
+    background-color: rgb(68, 33, 33);
+}
+.headding-1-sec-2{
+    color: white;
+    font-size: 35px;
+    padding: 50px 0 ;
+    text-align: center;
+    letter-spacing: .2em;
+}
+ /* 3rd section start heare  */
+
+.sec-3{
+    background-image: url(image/pawel-nolbert-xe-ss5Tg2mo-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 150px 0;
+
+}
+ .sec-3-maindiv{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 200px;
+    margin-right: 200px;
+    align-items: center;
+    gap: 20px;
+   
+ }
+ .sec-3-text{
+    font-size: 20px;
+    margin-bottom: 20px;
+ }
+ .sec-3-text ul{
+    margin: 20px 0 ;
+ }
+ .sec-3-text a{
+    text-decoration: none;
+    font-size: 18px;
+    background-color: yellow;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px 30px;
+    display: inline-block;
+ }
+ .grid-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+ }
+ .gird-sec-chile{
+ background-color: #1950865d;
+ color: black;
+ padding: 40px 20px;
+ border-radius: 5px;
+ text-align: center;
+ border: 2px solid limegreen;
+ }
+
+ /* 4 section start heare  */
+ #section-4-ishear{
+    background-color:#154360 ;
+    padding: 100px 0;
+ }
+.advice-parent{
+    display: flex;
+    margin-left: 200px;
+    margin-right: 200px;
+    gap: 30px;
+    align-items: center;
+}
+.advice-img img{
+    width: 100%;
+}
+.singler-advice p{
+    margin: 20px 0;
+    line-height: 1.5;
+    text-align: justify;
+}
+ .singler-advice h3{
+    font-size: 25px ;
+    border-bottom: 2px solid red;
+    padding-bottom:20px;
+ }
+ .singler-advice h4{
+    font-size: 25px ;
+    margin-top: 10px;
+ }
+ .singler-advice a{
+
+ }
+/* Responsive code start heare  */
+
+
+@media only screen and (max-width:940px){
+    .nameOf{
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        background-color: #17202a;
+        top: 80px;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 25px;
+        transition: all 0.5s ease;
+    }
+    #click:checked~ .nameOf i::before{
+        content: '\f00d';
+    }
+    #click:checked~ul{
+        left: 0%;
+    }
+    nav ul li {
+        margin: 50px 0;
+        font-size: 22px;
+   }
+
+
+
+   nav ul li a:hover,nav ul li a.active {
+    background: none;
+    color: red;
+   }
+
+
+}
+
+/* sectind-div responsive code start heare  */
+
+@media only screen and (max-width:688px){
+
+    .main-1-section{
+        width: 200px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px;
+    }
+    .sec-2-child{
+        margin-left:30px ;
+        margin-right:30px ;
+        display: block;
+        padding-bottom: 60px;
+    }
+    .img-sec-2 img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+     /* section-3 rsopan  */
+.sec-3-maindiv{
+    display: block;
+    margin-left: 30px;
+    margin-right: 30px;
+ }
+ .grid-section{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 20px;
+ }
+   
+}
+
+@media only screen and (min-width:689px) and (max-width:1099px) {
+
+    .main-1-section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+        width: 600px;
+    }
+    .sec-2-child{
+        margin-left:70px ;
+        margin-right:70px ;
+        display: block;
+        padding-bottom: 60px;
+    }
+    .img-sec-2 img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+/* section-3 rsopan  */
+ /* section-3 rsopan  */
+ .sec-3-maindiv{
+    display: block;
+    margin-left: 30px;
+    margin-right: 30px;
+ }
+ .grid-section{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 20px;
+ }
 }
